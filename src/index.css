@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: #3a494b;
+  }
+  
+  body {
+    background-color: #070d1e;
+    color: #e2e8f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body.light {
+    background-color: #f1f5f9;
+    color: #0f172a;
+  }
+
+  /* Custom tactical scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #070d1e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e305e;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff9933;
+  }
+
+  body.light ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  body.light ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+  }
+  body.light ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tactical grid pattern */
+.tactical-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(58, 73, 75, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(58, 73, 75, 0.12) 1px, transparent 1px);
+}
+
+.light .tactical-grid {
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+}
+
+.radar-sweep {
+  background: conic-gradient(from 0deg at 50% 50%, rgba(0, 242, 254, 0.15) 0deg, transparent 60deg, transparent 360deg);
+  animation: radar-spin 4s linear infinite;
+}
+
+@keyframes radar-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ==========================================================================
+   LIGHT MODE TACTICAL THEME STYLES (CRISP DEFENSE SLATE SPECIFICATION)
+   ========================================================================== */
+
+.light {
+  color-scheme: light;
+}
+
+/* Background overrides for containers */
+.light .bg-\[\#070d1e\] {
+  background-color: #f8fafc !important;
+}
+
+.light .bg-\[\#0e1938\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04) !important;
+}
+
+.light .bg-\[\#0b132b\] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05) !important;
+}
+
+.light .bg-\[\#0b132b\]\/95 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light .bg-\[\#070d1e\]\/95 {
+  background-color: rgba(248, 250, 252, 0.97) !important;
+}
+
+.light .bg-\[\#0e1938\]\/80 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.light .bg-\[\#14234b\] {
+  background-color: #f1f5f9 !important;
+}
+
+.light .bg-\[\#14234b\]\/60 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+
+.light .bg-\[\#1a2950\] {
+  background-color: #e2e8f0 !important;
+}
+
+.light .hover\:bg-\[\#14234b\]:hover {
+  background-color: #f1f5f9 !important;
+}
+
+.light .hover\:bg-\[\#1a2e63\]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* Border overrides */
+.light .border-\[\#1e305e\] {
+  border-color: #cbd5e1 !important;
+}
+
+.light .border-\[\#1e305e\]\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+.light .border-\[\#1e305e\]\/60 {
+  border-color: #cbd5e1 !important;
+}
+
+.light .border-\[\#1e305e\]\/50 {
+  border-color: #e2e8f0 !important;
+}
+
+.light .border-\[\#1e305e\]\/40 {
+  border-color: #e2e8f0 !important;
+}
+
+.light .divide-\[\#1e305e\]\/50 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0 !important;
+}
+
+.light .divide-\[\#1e305e\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: #cbd5e1 !important;
+}
+
+/* Text overrides for maximum legibility */
+.light .text-\[\#f8fafc\] {
+  color: #0f172a !important;
+}
+
+.light .text-\[\#ffffff\] {
+  color: #0f172a !important;
+}
+
+.light .text-\[\#e2e8f0\] {
+  color: #1e293b !important;
+}
+
+.light .text-\[\#cbd5e1\] {
+  color: #334155 !important;
+}
+
+.light .text-\[\#94a3b8\] {
+  color: #475569 !important;
+}
+
+.light .text-\[\#64748b\] {
+  color: #64748b !important;
+}
+
+.light .text-\[\#3b4d75\] {
+  color: #94a3b8 !important;
+}
+
+.light .text-\[\#334155\] {
+  color: #94a3b8 !important;
+}
+
+/* Saffron & Primary Accent overrides in Light mode (high-contrast WCAG AA compliant) */
+.light .text-\[\#ff9933\] {
+  color: #c2410c !important; /* Rich amber-saffron with high contrast */
+}
+
+.light .bg-\[\#ff9933\]\/15 {
+  background-color: rgba(234, 88, 12, 0.12) !important;
+}
+
+.light .bg-\[\#ff9933\]\/20 {
+  background-color: rgba(234, 88, 12, 0.15) !important;
+}
+
+.light .bg-\[\#ff9933\]\/25 {
+  background-color: rgba(234, 88, 12, 0.2) !important;
+}
+
+.light .border-\[\#ff9933\]\/40 {
+  border-color: rgba(234, 88, 12, 0.4) !important;
+}
+
+.light .border-\[\#ff9933\]\/50 {
+  border-color: rgba(234, 88, 12, 0.5) !important;
+}
+
+.light .border-\[\#ff9933\] {
+  border-color: #ea580c !important;
+}
+
+/* Green indicators */
+.light .text-\[\#22c55e\] {
+  color: #15803d !important;
+}
+
+.light .bg-\[\#138808\]\/20 {
+  background-color: rgba(22, 163, 74, 0.12) !important;
+}
+
+.light .border-\[\#138808\]\/40 {
+  border-color: rgba(22, 163, 74, 0.35) !important;
+}
+
+.light .border-\[\#138808\]\/50 {
+  border-color: rgba(22, 163, 74, 0.45) !important;
+}
+
+.light .text-\[\#4edea3\] {
+  color: #166534 !important;
+}
+
+/* Blue & Sky indicators */
+.light .text-\[\#38bdf8\] {
+  color: #0369a1 !important;
+}
+
+/* Yellow / Amber indicators */
+.light .text-\[\#fbbf24\] {
+  color: #b45309 !important;
+}
+
+/* Red / Danger indicators */
+.light .text-\[\#f87171\], .light .text-\[\#ef4444\] {
+  color: #b91c1c !important;
+}
+
+/* Input elements in Light mode */
+.light input, .light textarea, .light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light input:focus, .light textarea:focus, .light select:focus {
+  border-color: #ea580c !important;
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.2) !important;
+}
+
+/* Modals backdrop */
+.light .bg-black\/90 {
+  background-color: rgba(15, 23, 42, 0.65) !important;
+}

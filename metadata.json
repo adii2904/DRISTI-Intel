@@ -1,0 +1,6 @@
+{
+  "name": "DRISTI Intel",
+  "description": "Defense Risk & Intelligence Security Tracking Interface (DRISTI) - MHA Restricted tactical intelligence platform fusing CDR, FIU-IND UPI ledgers, CCTNS FIRs, Bhuvan ISRO geospatial tracking, FASTag toll telemetry, and BSA Section 65B evidence vault.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
