@@ -23,7 +23,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const { isDark } = useTheme();
 
   const navItems: { id: NavModule; label: string; icon: string; badge?: string; desc: string }[] = [
-    { id: 'ingestion', label: 'Data Ingestion', icon: 'cloud_upload', desc: 'Telco CDR, FIU ledgers, UFED' },
+    { id: 'ingestion', label: 'Data Upload', icon: 'cloud_upload', desc: 'Telco CDR, FIU ledgers, UFED' },
     { id: 'network', label: 'Network Graph', icon: 'hub', desc: 'Entity link analysis & path' },
     { id: 'dossier', label: 'Suspect Dossier', icon: 'badge', desc: 'Target profile & biometrics' },
     { id: 'anomalies', label: 'Threat Surface & AI', icon: 'crisis_alert', desc: 'Risk scoring & radar' },

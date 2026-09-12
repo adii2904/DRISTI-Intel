@@ -346,10 +346,10 @@ export const IngestionView: React.FC<IngestionViewProps> = ({
         <div>
           <div className="flex items-center space-x-2 text-[11px] font-mono text-[#ff9933] uppercase tracking-wider mb-1">
             <span className="material-symbols-outlined text-sm">cloud_sync</span>
-            <span>DATA INGESTION // OPERATIONAL PIPELINE</span>
+            <span>DATA UPLOAD // OPERATIONAL PIPELINE</span>
           </div>
           <h2 className="text-lg sm:text-xl font-bold text-[#f8fafc] font-['Space_Grotesk',sans-serif] tracking-wide">
-            Data Ingestion &amp; Multi-Source Processing
+            Data Upload &amp; Multi-Source Processing
           </h2>
           <p className="text-xs text-[#94a3b8] mt-0.5 max-w-2xl">
             Multi-source file upload and automated intake across Telco CDRs, financial transaction ledgers, and device extractions.
